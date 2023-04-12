@@ -887,7 +887,7 @@ type
       ## errors to stderr
 
 
-proc libusbInit*(ctx: ptr ptr LibusbContext): cint
+proc libusbInit*(ctx: var ptr LibusbContext): cint
   {.cdecl, dynlib: dllname, importc: "libusb_init".}
   ## Initializes libusb.
   ##
